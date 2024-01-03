@@ -3,7 +3,7 @@
 import { ShoppingCart } from "lucide-react"
 import { Sheet, SheetContent, SheetFooter, SheetHeader, SheetTitle, SheetTrigger } from "./ui/sheet"
 import { Separator } from "./ui/separator"
-import { formatPrice } from "@/lib/utils"
+import { formatPrice } from "@/src/lib/utils"
 import { buttonVariants } from "./ui/button"
 import Link from "next/link"
 import Image from "next/image"
