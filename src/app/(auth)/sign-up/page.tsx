@@ -1,12 +1,12 @@
 "use client"
 
-import { Icons } from "@/src/components/Icons"
-import { Button, buttonVariants } from "@/src/components/ui/button"
-import { Input } from "@/src/components/ui/input"
-import { Label } from "@/src/components/ui/label"
-import { cn } from "@/src/lib/utils"
-import { AuthCredentialsValidator, TAuthCredentialsValidator } from '@/src/lib/validators/account-credentials-validator'
-import { trpc } from "@/src/trpc/client"
+import { Icons } from "@/components/Icons"
+import { Button, buttonVariants } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { cn } from "@/lib/utils"
+import { AuthCredentialsValidator, TAuthCredentialsValidator } from '@/lib/validators/account-credentials-validator'
+import { trpc } from "@/trpc/client"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
