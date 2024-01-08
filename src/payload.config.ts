@@ -13,7 +13,7 @@ export default buildConfig({
         admin: '/sell',
     },
     admin: {
-        bundler: webpackBundler(),
+        bundler: viteBundler(),
         meta: {
             titleSuffix: "- DigitalHippo",
             favicon: "/favicon.ico",
