@@ -19,3 +19,13 @@ This tutorial is to start the learning journey of developing an ecommerce app us
 ### What I learned
 The main goals in learning are the setup of the reusable components and how to securly make transaction possible on ecommerce.
 
+1. Reusable components
+
+    This tutorial shows very well when you need a component and how to create it and use it. 
+
+    For example, the use of an MaxWidthWrapper that wrap the main application for an even style across the application.
+
+2. Hanlding state
+   
+   I learn how to hangling state for the display of elements of the navbar for exemple.
+
