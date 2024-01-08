@@ -29,3 +29,7 @@ The main goals in learning are the setup of the reusable components and how to s
    
    I learn how to hangling state for the display of elements of the navbar for exemple.
 
+3. Using tRPC
+
+    Using the component Providers, I learn how to use tRPC for all of my backend.
+
