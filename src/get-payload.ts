@@ -10,6 +10,7 @@ dotenv.config({
 
 const transporter = nodemailer.createTransport({
     host: "smtp.resend.com",
+    secure: true,
     port: 465,
     auth: {
         user: 'resend',

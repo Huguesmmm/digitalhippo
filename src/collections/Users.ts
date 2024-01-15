@@ -5,7 +5,7 @@ export const Users: CollectionConfig = {
     auth: {
         verify: {
             generateEmailHTML: ({token}) => {
-                return `<p>Hi! Please verify your email to connect.</p>`
+                return `<a href='${process.env.NEXT_PUBLIC_SERVER_URL}/verify-email?token=${token}'>Verify account</a>`
             }
         }
     },
