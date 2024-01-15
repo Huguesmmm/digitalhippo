@@ -1,5 +1,5 @@
 .glitterText {
-    background: -webkit-linear-gradient(30deg, #4169e1, #add8e6, #4169e1, #00008b);
+    background: -webkit-linear-gradient(30deg, #00008b, #4169e1, #add8e6, #4169e1, #00008b);
     background-size: 200% 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
