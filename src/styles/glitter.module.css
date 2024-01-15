@@ -1,0 +1,12 @@
+.glitterText {
+    background: -webkit-linear-gradient(30deg, #4169e1, #add8e6, #4169e1, #00008b);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glitter 3s linear infinite;
+}
+
+@keyframes glitter {
+    0% { background-position: -50% 0 }
+    100% { background-position: 150% 0 }
+}
