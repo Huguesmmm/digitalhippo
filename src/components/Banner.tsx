@@ -58,7 +58,7 @@ const Banner = () => {
                                     <DrawerHeader>
                                         <div className='flex flex-col items-center justify-center space-y-2'>
                                             <Compass className={cn('h-12 w-12 text-blue-500 transition-all', { "animate-spin-once": isDrawerOpen })} style={{ animationDelay: '.5s' }} />
-                                            <DrawerTitle className='text-2xl font-semibold'>Let's explore!</DrawerTitle>
+                                            <DrawerTitle className='text-2xl font-semibold'>Let&apos;s explore!</DrawerTitle>
                                             <DrawerDescription className='text-base text-muted-foreground text-center'>
                                                 Dive in and try these parts of the website.
                                             </DrawerDescription>
