@@ -7,7 +7,11 @@ export const getServerSideUser = async (
 ) => {
     const token = cookies.get('payload-token')?.value
 
-    const meRes = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/users/me`,
+    const public_url = process.env.NEXT_PUBLIC_SERVER_URL
+
+    if (!public_url) throw new Error("Couldn't find public url at me")
+
+    const meRes = await fetch(`${public_url}/api/users/me`,
         {
             headers: {
                 Authorization: `JWT ${token}`,

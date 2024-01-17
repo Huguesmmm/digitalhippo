@@ -12,7 +12,9 @@ export const useAuth = () => {
     const router = useRouter()
     const signOut = async () => {
         try {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/users/logout`,
+            const public_url = process.env.NEXT_PUBLIC_SERVER_URL
+            if (!public_url) throw new Error("Couldn't find public url")
+            const res = await fetch(`${public_url}/api/users/logout`,
                 {
                     method: 'POST',
                     headers: {
@@ -20,7 +22,7 @@ export const useAuth = () => {
                     },
                     credentials: 'include',
                 })
-            if (!res.ok) throw new Error()
+            if (!res.ok) throw new Error('Could not log out')
 
             toast.success('Logged out successfully')
 
