@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var bundler_vite_1 = require("@payloadcms/bundler-vite");
+var bundler_webpack_1 = require("@payloadcms/bundler-webpack");
 var db_mongodb_1 = require("@payloadcms/db-mongodb");
 var richtext_slate_1 = require("@payloadcms/richtext-slate");
 var path_1 = __importDefault(require("path"));
@@ -21,7 +21,7 @@ exports.default = (0, config_1.buildConfig)({
     },
     admin: {
         user: "users",
-        bundler: (0, bundler_vite_1.viteBundler)(),
+        bundler: (0, bundler_webpack_1.webpackBundler)(),
         meta: {
             titleSuffix: "- DigitalHippo",
             favicon: "/favicon.ico",

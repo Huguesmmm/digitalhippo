@@ -4,6 +4,8 @@ import { nextApp, nextHandler } from "./next-utils"
 import * as trpcExpress from "@trpc/server/adapters/express"
 import { appRouter } from "./trpc"
 import { inferAsyncReturnType } from "@trpc/server"
+import nextBuild from "next/dist/build"
+import path from "path"
 
 
 const app = express()
@@ -16,6 +18,7 @@ const createContext = ({ req, res }: trpcExpress.CreateExpressContextOptions) =>
 export type ExpressContext = inferAsyncReturnType<typeof createContext>
 
 const start = async () => {
+
     const payload = await getPayloadClient({
         initOptions: {
             express: app,
@@ -24,6 +27,18 @@ const start = async () => {
             }
         }
     })
+
+    if (process.env.NEXT_BUILD) {
+        app.listen(async () => {
+            payload.logger.info("Payload is building for production")
+            // @ts-ignore-error
+            await nextBuild(path.join(__dirname, '../'))
+
+            process.exit()
+        })
+
+        return
+    }
 
     app.use('/api/trpc', trpcExpress.createExpressMiddleware({
         router: appRouter,

@@ -67,6 +67,8 @@ var get_payload_1 = require("./get-payload");
 var next_utils_1 = require("./next-utils");
 var trpcExpress = __importStar(require("@trpc/server/adapters/express"));
 var trpc_1 = require("./trpc");
+var build_1 = __importDefault(require("next/dist/build"));
+var path_1 = __importDefault(require("path"));
 var app = (0, express_1.default)();
 var PORT = Number(process.env.PORT) || 3000;
 var createContext = function (_a) {
@@ -93,6 +95,24 @@ var start = function () { return __awaiter(void 0, void 0, void 0, function () {
                 })];
             case 1:
                 payload = _a.sent();
+                if (process.env.NEXT_BUILD) {
+                    app.listen(function () { return __awaiter(void 0, void 0, void 0, function () {
+                        return __generator(this, function (_a) {
+                            switch (_a.label) {
+                                case 0:
+                                    payload.logger.info("Payload is building for production");
+                                    // @ts-ignore-error
+                                    return [4 /*yield*/, (0, build_1.default)(path_1.default.join(__dirname, '../'))];
+                                case 1:
+                                    // @ts-ignore-error
+                                    _a.sent();
+                                    process.exit();
+                                    return [2 /*return*/];
+                            }
+                        });
+                    }); });
+                    return [2 /*return*/];
+                }
                 app.use('/api/trpc', trpcExpress.createExpressMiddleware({
                     router: trpc_1.appRouter,
                     createContext: createContext
