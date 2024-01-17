@@ -6,7 +6,7 @@ module.exports = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   theme: {
     container: {
       center: true,
@@ -65,10 +65,25 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: 0 },
         },
+        "spin-once": {
+          "0%": {
+            transform: "rotate(0deg)"
+          },
+          "10%": { 
+            transform: "rotate(-40deg)" 
+          },
+          // "90%": {
+          //   transform: "rotate(390deg)"
+          // },
+          "100% ": { 
+            transform: "rotate(360deg)" 
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "spin-once": "spin-once 1.5s cubic-bezier(.66,.1,.4,.91)",
       },
     },
   },
