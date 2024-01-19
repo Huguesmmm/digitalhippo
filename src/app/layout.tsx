@@ -6,7 +6,6 @@ import Navbar from '@/components/Navbar'
 import Providers from '../components/Providers'
 import { Toaster } from 'sonner'
 import Banner from '@/components/Banner'
-import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({ subsets: ['latin'] })
@@ -34,7 +33,6 @@ export default function RootLayout({
           </Providers>
         </main>
         <Toaster position='top-center' richColors />
-        <SpeedInsights />
         <Analytics />
       </body>
     </html>
