@@ -23,11 +23,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full">
       <body className={cn("relative h-full font-sans antialiased", inter.className)}>
-        <main className='relative flex flex-col min-h-screen'>
+        <main className='relative flex min-h-screen flex-col'>
           <Providers>
             <Banner />
             <Navbar />
-            <div className='flex-grow flex-1'>
+            <div className='flex-1 grow'>
               {children}
             </div>
           </Providers>

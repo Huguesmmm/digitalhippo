@@ -26,13 +26,13 @@ const Banner = () => {
 
     return (
         <div className={cn("bg-blue-500")}>
-            <div className="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
-                <div className="flex items-center justify-between flex-wrap">
-                    <div className="w-0 flex-1 flex items-center">
-                        <span className="flex p-2 rounded-lg bg-blue-800">
-                            <ConstructionIcon className="h-6 w-6 text-white" aria-hidden="true" />
+            <div className="mx-auto max-w-7xl p-3 sm:px-6 lg:px-8">
+                <div className="flex flex-wrap items-center justify-between">
+                    <div className="flex w-0 flex-1 items-center">
+                        <span className="flex rounded-lg bg-blue-800 p-2">
+                            <ConstructionIcon className="size-6 text-white" aria-hidden="true" />
                         </span>
-                        <p className="ml-3 font-medium text-white truncate lg:ml-5">
+                        <p className="ml-3 truncate font-medium text-white lg:ml-5">
                             <span className="md:hidden">
                                 Warning! Under development.
                             </span>
@@ -44,7 +44,7 @@ const Banner = () => {
                             </span>
                         </p>
                     </div>
-                    <div className="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
+                    <div className="order-3 mt-2 w-full shrink-0 sm:order-2 sm:mt-0 sm:w-auto">
                         {/* <a href="#"
                             className="flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-blue-500 bg-white hover:bg-blue-50">
                             Learn more
@@ -59,7 +59,7 @@ const Banner = () => {
                                         <div className='flex flex-col items-center justify-center space-y-2'>
                                             <Compass className={cn('h-12 w-12 text-blue-500 transition-all', { "animate-spin-once": isDrawerOpen })} style={{ animationDelay: '.5s' }} />
                                             <DrawerTitle className='text-2xl font-semibold'>Let&apos;s explore!</DrawerTitle>
-                                            <DrawerDescription className='text-base text-muted-foreground text-center'>
+                                            <DrawerDescription className='text-center text-base text-muted-foreground'>
                                                 Dive in and try these parts of the website.
                                             </DrawerDescription>
                                         </div>
