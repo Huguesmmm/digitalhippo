@@ -2,7 +2,7 @@
 This is a a Digital Marketplace build from a tutorial by Josh Tried Coding [Digital Marketplace Tutorial](https://www.youtube.com/watch?v=06g6YJ6JCJU)
 
 # Preview
-[<img src="nameOfTheScreenShot"/>](deployLink)
+[<img src="https://github.com/Huguesmmm/digitalhippo/blob/main/public/digitalhippo_deployment.png" width="350" height=250>](https://digitalhippo-production-f969.up.railway.app/)
 
 # Overview
 This tutorial is to start the learning journey of developing an ecommerce app using a cms.
